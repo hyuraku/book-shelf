@@ -14,5 +14,7 @@ module Types
     end
 
     field :coordinates, Types::CoordinatesType, null: false
+
+    field :publication_year, [Int],null: false
   end
 end
