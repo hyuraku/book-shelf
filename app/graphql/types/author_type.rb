@@ -1,4 +1,14 @@
 module Types
+  class AuthorInputType < GraphQL::Schema::InputObject
+    graphql_name "AuthorInputType"
+    description "All the attribute for creating an author"
+
+    argument :first_name, String,required: false,camelize: false
+    argument :last_name, String,required: false,camelize: false
+    argument :birth_year, Int,required: false
+    argument :is_alive, Boolean,required: false,camelize: false
+  end
+
   class AuthorType < Types::BaseObject
     description "An author"
 
