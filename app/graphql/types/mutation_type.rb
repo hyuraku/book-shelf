@@ -18,6 +18,15 @@ module Types
       existing&.update(author.to_h)
     end
 
+    field :delete_author, Boolean, null: false, description: "Update an author" do
+      argument :id, ID,required: true
+    end
+
+    def delete_author(id:)
+      Author.where(id: id).destroy_all
+      true
+    end
+
     # field :create_author, Types::AuthorType, mutation: Mutations::CreateAuthor
 
   end
