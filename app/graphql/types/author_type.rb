@@ -3,6 +3,7 @@ module Types
     graphql_name "AuthorInputType"
     description "All the attribute for creating an author"
 
+    argument :id, ID, required: false
     argument :first_name, String,required: false,camelize: false
     argument :last_name, String,required: false,camelize: false
     argument :birth_year, Int,required: false
